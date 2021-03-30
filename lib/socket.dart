@@ -59,7 +59,7 @@ class SocketIO {
   ///Create a socket object with identifier received from platform API's
   SocketIO(this.id)
       : _channel =
-            new MethodChannel("adhara_socket_io:socket:${id.toString()}") {
+            new MethodChannel("joonaak_socket_io:socket:${id.toString()}") {
     _channel.setMethodCallHandler((call) async {
       if (call.method == 'incoming') {
         final String eventName = call.arguments['eventName'];
@@ -106,7 +106,7 @@ class SocketIO {
     if (_listeners[eventName] == null) {
       _listeners[eventName] = [];
     }
-    if(_listeners[eventName].length == 0){
+    if (_listeners[eventName].length == 0) {
       _channel.invokeMethod("on", {"eventName": eventName});
     }
     _listeners[eventName].add(listener);

@@ -5,13 +5,13 @@ import SocketIO
 
 public class SwiftJoonaakSocketIoPlugin: NSObject, FlutterPlugin {
 
-    var instances: [Int: AdharaSocket];
+    var instances: [Int: JoonaakSocket];
     var currentIndex: Int;
     let registrar: FlutterPluginRegistrar;
 
     init(_ _registrar: FlutterPluginRegistrar){
         registrar = _registrar
-        instances = [Int: AdharaSocket]()
+        instances = [Int: JoonaakSocket]()
         currentIndex = 0;
     }
 
@@ -27,8 +27,8 @@ public class SwiftJoonaakSocketIoPlugin: NSObject, FlutterPlugin {
         switch (call.method) {
             case "newInstance":
                 let newIndex = currentIndex;
-                let config:AdharaSocketIOClientConfig
-                    = AdharaSocketIOClientConfig(newIndex, uri: arguments["uri"] as! String,
+                let config:JoonaakSocketIOClientConfig
+                    =JoonaakSocketIOClientConfig(newIndex, uri: arguments["uri"] as! String,
                                                  namespace: arguments["namespace"] as! String, path: arguments["path"] as! String)
                 if let query: [String:String] = arguments["query"] as? [String:String]{
                     config.query = query
@@ -36,7 +36,7 @@ public class SwiftJoonaakSocketIoPlugin: NSObject, FlutterPlugin {
                 if let enableLogging: Bool = arguments["enableLogging"] as? Bool {
                     config.enableLogging = enableLogging
                 }
-                instances[newIndex] = AdharaSocket.getInstance(registrar, config)
+                instances[newIndex] = JoonaakSocket.getInstance(registrar, config)
                 currentIndex += 1
                 result(newIndex)
             case "clearInstance":

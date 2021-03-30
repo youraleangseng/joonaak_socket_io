@@ -1,6 +1,6 @@
 name: joonaak_socket_io
 description: A new Flutter package project.
-version: 0.0.4
+version: 0.0.6
 homepage: https://github.com/youraleangseng/joonaak_socket_io
 
 environment:
@@ -19,7 +19,7 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.infitio.adharasocketio
+        package: com.joonaak.joonaaksocketio
         pluginClass: JoonaakSocketIoPlugin
       ios:
         pluginClass: JoonaakSocketIoPlugin

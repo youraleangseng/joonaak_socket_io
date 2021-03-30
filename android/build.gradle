@@ -1,4 +1,4 @@
-group 'com.infitio.adharasocketio'
+group 'com.joonaak.joonaaksocketio'
 version '1.0-SNAPSHOT'
 
 buildscript {
