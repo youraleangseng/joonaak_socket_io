@@ -37,7 +37,7 @@ public class JoonaakSocket: NSObject, FlutterPlugin {
         registrar.addMethodCallDelegate(instance, channel: channel)
         return instance
     }
-    
+
     public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
         var arguments: [String: AnyObject]
         if(call.arguments != nil){
@@ -73,12 +73,12 @@ public class JoonaakSocket: NSObject, FlutterPlugin {
                 if (reqId == nil) {
                     socket.emit(eventName, with: data)
                 } else {
-                    socket.emitWithAck(eventName, with: data).timingOut(after: 0) { data in 
-                        self.channel.invokeMethod("incomingAck", arguments: [
-                            "args": data,
-                            "reqId": reqId
-                        ]);
-                    }
+                    // socket.emitWithAck(eventName, with: data).timingOut(after: 0) { data in 
+                    //     self.channel.invokeMethod("incomingAck", arguments: [
+                    //         "args": data,
+                    //         "reqId": reqId
+                    //     ]);
+                    // }
                 }
                 result(nil)
             case "isConnected":
