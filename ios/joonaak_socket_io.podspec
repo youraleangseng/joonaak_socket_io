@@ -3,10 +3,10 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'joonaak_socket_io'
-  s.version          = '0.0.1'
-  s.summary          = 'socket.io for flutter by adhara'
+  s.version          = '0.0.4'
+  s.summary          = 'socket.io for flutter by joonaak'
   s.description      = <<-DESC
-socket.io for flutter by adhara
+socket.io for flutter by joonaak
                        DESC
   s.homepage         = 'https://github.com/youraleangseng/joonaak_socket_io/'
   s.license          = { :file => '../LICENSE' }

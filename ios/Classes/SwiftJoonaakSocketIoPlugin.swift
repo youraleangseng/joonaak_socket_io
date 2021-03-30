@@ -3,7 +3,7 @@ import UIKit
 import SocketIO
 
 
-public class SwiftAdharaSocketIoPlugin: NSObject, FlutterPlugin {
+public class SwiftJoonaakSocketIoPlugin: NSObject, FlutterPlugin {
 
     var instances: [Int: AdharaSocket];
     var currentIndex: Int;
@@ -17,7 +17,7 @@ public class SwiftAdharaSocketIoPlugin: NSObject, FlutterPlugin {
 
     public static func register(with registrar: FlutterPluginRegistrar) {
         let channel = FlutterMethodChannel(name: "joonaak_socket_io", binaryMessenger: registrar.messenger())
-        let instance = SwiftAdharaSocketIoPlugin(registrar)
+        let instance = SwiftJoonaakSocketIoPlugin(registrar)
         registrar.addMethodCallDelegate(instance, channel: channel)
     }
 

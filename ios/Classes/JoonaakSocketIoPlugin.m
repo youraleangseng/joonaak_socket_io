@@ -1,8 +1,8 @@
-#import "AdharaSocketIoPlugin.h"
+#import "JoonaakSocketIoPlugin.h"
 #import <adhara_socket_io/adhara_socket_io-Swift.h>
 
-@implementation AdharaSocketIoPlugin
+@implementation JoonaakSocketIoPlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {
-  [SwiftAdharaSocketIoPlugin registerWithRegistrar:registrar];
+  [SwiftJoonaakSocketIoPlugin registerWithRegistrar:registrar];
 }
 @end

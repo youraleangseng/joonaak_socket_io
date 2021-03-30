@@ -16,9 +16,9 @@ import io.flutter.plugin.common.PluginRegistry.Registrar;
 
 
 /**
- * AdharaSocketIoPlugin
+ * JoonaakSocketIoPlugin
  */
-public class AdharaSocketIoPlugin implements MethodCallHandler {
+public class JoonaakSocketIoPlugin implements MethodCallHandler {
 
     private Map<Integer, AdharaSocket> instances;
     private int currentIndex;
@@ -33,7 +33,7 @@ public class AdharaSocketIoPlugin implements MethodCallHandler {
         }
     }
 
-    private AdharaSocketIoPlugin(Registrar registrar/*, MethodChannel channel*/) {
+    private JoonaakSocketIoPlugin(Registrar registrar/*, MethodChannel channel*/) {
         this.instances = new HashMap<Integer, AdharaSocket>();
         this.currentIndex = 0;
 //        this.channel = channel;
@@ -42,7 +42,7 @@ public class AdharaSocketIoPlugin implements MethodCallHandler {
 
     public static void registerWith(Registrar registrar) {
         final MethodChannel channel = new MethodChannel(registrar.messenger(), "adhara_socket_io");
-        channel.setMethodCallHandler(new AdharaSocketIoPlugin(registrar/*, channel*/));
+        channel.setMethodCallHandler(new JoonaakSocketIoPlugin(registrar/*, channel*/));
     }
 
     static String[] getStringArray(List<String> arr){
@@ -65,7 +65,7 @@ public class AdharaSocketIoPlugin implements MethodCallHandler {
                     try {
                         List<String> transports = call.argument("transports");
                         if (transports != null) {
-                            options.transports = AdharaSocketIoPlugin.getStringArray(transports);
+                            options.transports = JoonaakSocketIoPlugin.getStringArray(transports);
                         }
                         options.timeout = ((Number) call.argument("timeout")).longValue();
                     }catch (Exception e){
