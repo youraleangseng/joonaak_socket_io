@@ -1,7 +1,7 @@
 name: joonaak_socket_io
 description: A new Flutter package project.
-version: 0.0.2
-homepage: https://github.com/infitio/flutter_socket_io
+version: 0.0.3
+homepage: https://github.com/youraleangseng/joonaak_socket_io
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
