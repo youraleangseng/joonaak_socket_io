@@ -3,7 +3,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'joonaak_socket_io'
-  s.version          = '0.0.6'
+  s.version          = '0.0.7'
   s.summary          = 'socket.io for flutter by joonaak'
   s.description      = <<-DESC
 socket.io for flutter by joonaak

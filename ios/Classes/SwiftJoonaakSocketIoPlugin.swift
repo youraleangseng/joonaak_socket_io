@@ -28,7 +28,7 @@ public class SwiftJoonaakSocketIoPlugin: NSObject, FlutterPlugin {
             case "newInstance":
                 let newIndex = currentIndex;
                 let config:JoonaakSocketIOClientConfig
-                    =JoonaakSocketIOClientConfig(newIndex, uri: arguments["uri"] as! String,
+                    = JoonaakSocketIOClientConfig(newIndex, uri: arguments["uri"] as! String,
                                                  namespace: arguments["namespace"] as! String, path: arguments["path"] as! String)
                 if let query: [String:String] = arguments["query"] as? [String:String]{
                     config.query = query

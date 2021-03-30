@@ -9,3 +9,5 @@ upgrade
 upgrade
 * ## [0.0.6] - TODO: Add release date.
 upgrade
+* ## [0.0.7] - TODO: Add release date.
+upgrade
