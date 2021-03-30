@@ -1,0 +1,27 @@
+name: joonaak_socket_io
+description: A new Flutter package project.
+version: 0.0.2
+homepage: https://github.com/infitio/flutter_socket_io
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        package: com.infitio.adharasocketio
+        pluginClass: AdharaSocketIoPlugin
+      ios:
+        pluginClass: AdharaSocketIoPlugin
+      macos:
+        pluginClass: AdharasocketioPlugin
